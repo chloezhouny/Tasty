@@ -20,9 +20,9 @@ router.get("/", function(req, res) {
 
 router.post("/api/orders", function(req, res) {
   order.insertOne([
-    "order_name", "devoured"
+    "order_name", "prepared"
   ], [
-    req.body.order_name, req.body.devoured
+    req.body.order_name, req.body.prepared
   ], function(result) {
    
     res.json({ id: result.insertId });
@@ -39,7 +39,7 @@ router.put("/api/orders/:id", function(req, res) {
   console.log("condition", condition);
 
   order.updateOne({
-    devoured: req.body.devoured
+    prepared: req.body.prepared
   }, condition, function(result) {
     if (result.changedRows == 0) {
       // If no rows were changed, then the ID must not exist, so 404

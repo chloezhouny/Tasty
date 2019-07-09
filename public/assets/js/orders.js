@@ -1,11 +1,11 @@
 // Make sure we wait to attach our handlers until the DOM is fully loaded.
 $(function() {
-  $(".change-devoured").on("click", function(event) {
+  $(".change-prepared").on("click", function(event) {
     var id = $(this).data("id");
-    var newdevoured = $(this).data("newdevoured");
+    var newprepared = $(this).data("newprepared");
 
-    var newdevouredState = {
-      devoured: newdevoured
+    var newpreparedState = {
+      prepared: newprepared
     };
 
 
@@ -14,10 +14,10 @@ $(function() {
     // Send the PUT request.
     $.ajax("/api/orders/" + id, {
       type: "PUT",
-      data: newdevouredState
+      data: newpreparedState
     }).then(
       function() {
-        console.log("changed devoured to", newdevoured);
+        console.log("changed prepared to", newprepared);
         // Reload the page to get the updated list
         location.reload();
       }
