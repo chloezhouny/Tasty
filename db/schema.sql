@@ -1,3 +1,4 @@
+DROP DATABASE IF EXISTS tasty_db;
 CREATE DATABASE tasty_db;
 USE tasty_db;
 

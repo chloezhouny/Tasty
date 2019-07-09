@@ -1,0 +1,33 @@
+<h1>Orders</h1>
+
+<h2>Orders preparing</h2>
+
+<ul>
+  {{#each orders}}
+    {{#unless devoured}}
+      {{> orders/order-block devoured=true}}
+    {{/unless}}
+  {{/each}}
+</ul>
+
+<h2>Orders sent</h2>
+
+<ul>
+  {{#each orders}}
+    {{#if devoured}}
+      <li>  {{order_name}} </li>
+      <!-- {{> orders/order-block devoured=false}} -->
+    {{/if}}
+  {{/each}}
+</ul>
+
+<h2>Add Your Order</h2>
+<form class="create-form">
+
+  <div class="form-group">
+    <label for="ca">Add To Cart</label>
+    <input type="text" value="0" id="cart" name="name">
+  </div>
+
+  <button type="submit">CHECKOUT</button>
+</form>
