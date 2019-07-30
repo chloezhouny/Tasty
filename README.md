@@ -1,8 +1,7 @@
 # Tasty
 
-Incrowd a compatibility-based "MusicFriendFinder" application. This full-stack site will take in users' ratings for each music genre playlist , then compare their answers with those from other users. The app will then display the name and favourite youtube song video of the user with the best overall music taste match.
-
-Heroku Deployed Link: https://incrowd.herokuapp.com/
+Tasty a food logger with MySQL, Node, Express, Handlebars and a homemade ORM (yum!). 
+Heroku Deployed Link: https://tastyyy.herokuapp.com/
 
 <br>
 
