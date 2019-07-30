@@ -1,0 +1,46 @@
+
+
+1. Workout 
+
+
+	A.Fitbit: https://rapidapi.com/dimashirokov/api/FitbitAPI/details
+		FitbitAPI.browseActivityTypes
+		
+			Get a tree of all valid Fitbit public activities from the activities catalog as well as private custom activities the user created in the format requested. If the activity has levels, also get a list of activity level details. Typically, an applications retrieve the complete list of activities once at startup to cache and show in the UI later.
+
+
+
+		FitbitAPI.getActivityType
+
+			Returns the details of a specific activity in the Fitbit activities database in the format requested. If activity has levels, also returns a list of activity level details.
+
+
+	B. Under Armour: https://www.programmableweb.com/api/under-armour-webhooks
+
+		API Genious Videos API: 
+		https://docs.apigenius.io/docs/services/videos/operations/get-videos
+
+
+
+
+
+
+2. Food API: 
+
+
+			FitbitAPI.getFoodUnits
+				This endpoint returns a list of all valid Fitbit food units in the format requested.
+
+
+
+			FitbitAPI.getFood
+				This endpoint returns the details of a specific food in the Fitbit food database or a private food the authorized user has entered in the format requested.
+
+
+
+
+
+
+
+
+

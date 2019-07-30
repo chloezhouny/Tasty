@@ -1,33 +1,61 @@
-<h1>Orders</h1>
 
+<div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
+<nav class="uk-navbar-container uk-margin" uk-navbar>
+    <div class="uk-navbar-left">
+
+        <div class="uk-navbar-left-right"><div>
+             <a class="uk-navbar-item uk-logo" href="/">Tasty</a>
+        </div>
+    </div>
+
+    </div>
+</nav>
+</div>
+
+<div class = "addOrder" >
+
+
+<form class="create-form">
+  <h1 class="uk-align-center">Anything, anytime, anywhere. </h1>
+
+  <div class="uk-margin uk-align-center">
+    <input class="uk-input uk-form-width-large uk-align-center form-group" type="text" id="cart" name="name" placeholder="Enter your order">
+  </div>
+
+ <button type="submit" class="uk-button uk-button-secondary uk-button-medium uk-align-center">Submit your order</button>
+  <!-- <button >Add your oder</button> -->
+</form>
+
+</div>
+
+<div class="uk-container-fluid mainContent">
+
+<div class="uk-container uk-column-1-2 uk-column-divider content">
+<div class = "prepare">
 <h2>Preparing</h2>
 
-<ul>
+<ul class="uk-align-center">
   {{#each orders}}
     {{#unless prepared}}
       {{> orders/order-block prepared=true}}
     {{/unless}}
   {{/each}}
 </ul>
+</div>
 
-<h2>Sent</h2>
+<div class = "sent">
+<h2>Delivered</h2>
 
-<ul>
+<ul class="uk-align-center">
   {{#each orders}}
     {{#if prepared}}
-      <li>  {{order_name}} </li>
+      <p>  {{order_name}}</p>
       <!-- {{> orders/order-block prepared=false}} -->
     {{/if}}
   {{/each}}
 </ul>
+</div>
 
-<!-- <h2>Add Your Order</h2> -->
-<form class="create-form">
+</div>
+</div>
 
-  <div class="form-group">
-<!--     <label for="cart">Add To Cart</label> -->
-    <input type="text" id="cart" name="name">
-  </div>
-
-  <button type="submit">CHECKOUT</button>
-</form>
